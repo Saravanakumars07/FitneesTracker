@@ -8,7 +8,7 @@ const KEY = "healthAndFitness";
     try { const s = localStorage.getItem(KEY); return s ? JSON.parse(s) : []; } catch { return []; }
   })    ;
   const [show, setShow] = useState(false);
-  
+
   const [editId, setEditId] = useState(null);
   const [form, setForm] = useState({ date: "", intake: "", burned: "", description: "" });
 
@@ -53,12 +53,15 @@ const KEY = "healthAndFitness";
       <div className="top-section">
         <div className="card"><h3>Update Today's Data</h3><button onClick={openAdd}>+ Add data</button></div>
         <div className="top-right">
-          {data.length===0 ? <span className="no-data-text">No data available</span> :
-            <div className="weekly-chart-box"><h3>Weekly Health Trends</h3>
-              <ResponsiveContainer width="100%" height={180}>
-                <BarChart data={weekData}><CartesianGrid strokeDasharray="3 3" stroke="#777"/><XAxis dataKey="date" tick={{fontSize:10, fill:"#fff"}}/><YAxis tick={{fontSize:10, fill:"#fff"}}/><Tooltip/><Bar dataKey="intake" fill="#8b8bff"/><Bar dataKey="burned" fill="#82ca9d"/></BarChart>
-              </ResponsiveContainer>
-            </div>
+          {<div className="top-right">
+  {weekData.length===0 ? <span className="no-data-text">No data available</span> :
+    <div className="weekly-chart-box"><h3>Weekly Health Trends</h3>
+      <ResponsiveContainer width="100%" height={180}>
+        <BarChart data={weekData}><CartesianGrid strokeDasharray="3 3" stroke="#777"/><XAxis dataKey="date" tick={{fontSize:10, fill:"#fff"}}/><YAxis tick={{fontSize:10, fill:"#fff"}}/><Tooltip/><Bar dataKey="intake" fill="#8b8bff"/><Bar dataKey="burned" fill="#82ca9d"/></BarChart>
+      </ResponsiveContainer>
+    </div>
+  }
+</div>
           }
         </div>
       </div>
