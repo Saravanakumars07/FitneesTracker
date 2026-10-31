@@ -1,38 +1,24 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+*{box-sizing:border-box;margin:0;padding:0;font-family:Inter,Arial}
+body{background:#1e1e1e}
+.app{background:#2e2e2e;min-height:100vh;color:#fff}
+.header{background:#1a1a1a;padding:12px 20px}
+.header h1{font-size:20px;font-weight:700}
+.top-section{background:#555;margin:16px;border-radius:8px;padding:16px;display:flex;gap:16px;min-height:180px;align-items:center;flex-wrap:wrap}
+.card{background:#9a9a9a;border-radius:10px;padding:20px;width:260px;text-align:center}
+.card h3{font-weight:400;margin-bottom:12px}
+.card button{background:#5daa45;color:#fff;border:none;padding:8px 14px;border-radius:4px;cursor:pointer}
+.top-right{flex:1;min-width:280px}
+.no-data-text{font-size:12px;color:#222}
+.weekly-chart-box h3{font-size:14px;text-align:center;margin-bottom:6px}
+.bottom-section{display:flex;gap:20px;padding:16px;flex-wrap:wrap}
+.recent{flex:1.2;min-width:300px}
+.overall{flex:0.6;min-width:260px}
+.recent h2,.overall h2{font-style:italic;font-size:18px;margin-bottom:10px}
+.empty{font-size:12px;opacity:.6}
+.recent-item{background:#3a3a3a;border-radius:8px;padding:12px;margin-bottom:10px;display:flex;justify-content:space-between}
+.legend{font-size:11px;text-align:center}
+.overlay{position:fixed;inset:0;background:rgba(0,0,0,.6);display:flex;align-items:center;justify-content:center;z-index:20}
+.modal{background:#fff;color:#111;border-radius:8px;padding:20px;width:360px;max-width:90%}
+.modal input{width:100%;padding:8px;border:1px solid #ccc;border-radius:6px;margin-top:2px}
+.modal button[type="submit"]{width:100%;background:#0d6efd;color:#fff;border:none;padding:8px;border-radius:6px;margin-top:12px}
+.cancel{width:100%;background:#dc3545;color:#fff;border:none;padding:8px;border-radius:6px;margin-top:6px}
